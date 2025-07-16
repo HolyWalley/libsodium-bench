@@ -35,5 +35,30 @@ export const AVAILABLE_ALGORITHMS: Algorithm[] = [
     id: 'crypto_aead_aegis128l_encrypt',
     name: 'crypto_aead_aegis128l_encrypt',
     description: 'AEGIS-128L is a modern AES-based cipher with unique properties making it easier and safer to use than common alternatives'
+  },
+  {
+    id: 'crypto_aead_xchacha20_poly1305_ietf_decrypt',
+    name: 'crypto_aead_xchacha20_poly1305_ietf_decrypt',
+    description: 'XChaCha20-Poly1305 IETF decryption - benchmarks decryption performance'
+  },
+  {
+    id: 'crypto_aead_chacha20poly1305_decrypt',
+    name: 'crypto_aead_chacha20poly1305_decrypt',
+    description: 'ChaCha20-Poly1305 original decryption - benchmarks decryption performance'
+  },
+  {
+    id: 'crypto_aead_chacha20poly1305_ietf_decrypt',
+    name: 'crypto_aead_chacha20poly1305_ietf_decrypt',
+    description: 'ChaCha20-Poly1305 IETF decryption - benchmarks decryption performance'
+  },
+  {
+    id: 'crypto_aead_aegis256_decrypt',
+    name: 'crypto_aead_aegis256_decrypt',
+    description: 'AEGIS-256 decryption - benchmarks decryption performance'
+  },
+  {
+    id: 'crypto_aead_aegis128l_decrypt',
+    name: 'crypto_aead_aegis128l_decrypt',
+    description: 'AEGIS-128L decryption - benchmarks decryption performance'
   }
 ];
