@@ -16,7 +16,6 @@ function App() {
       id: generateId(),
       algorithm: 'crypto_sign_detached',
       iterations: 1000,
-      warmupIterations: 100,
       dataSize: 1024,
       isRunning: false,
     }
@@ -31,13 +30,13 @@ function App() {
     // Update benchmark state to running
     setBenchmarks(prev => prev.map(b => 
       b.id === id 
-        ? { ...b, isRunning: true, algorithm: formData.algorithm, iterations: parseInt(formData.iterations), warmupIterations: parseInt(formData.warmupIterations), dataSize: parseInt(formData.dataSize) }
+        ? { ...b, isRunning: true, algorithm: formData.algorithm, iterations: parseInt(formData.iterations), dataSize: parseInt(formData.dataSize) }
         : b
     ))
 
     try {
       const benchmarkRunner = BenchmarkRunner.getInstance()
-      const result = await benchmarkRunner.runBenchmark(id, formData)
+      const result = await benchmarkRunner.runBenchmark(formData)
       
       // Update benchmark with result
       setBenchmarks(prev => prev.map(b => 

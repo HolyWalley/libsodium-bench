@@ -12,7 +12,6 @@ export const BenchmarkForm: React.FC<BenchmarkFormProps> = ({ benchmark, onSubmi
   const [formData, setFormData] = useState<BenchmarkFormData>({
     algorithm: benchmark.algorithm,
     iterations: benchmark.iterations.toString(),
-    warmupIterations: benchmark.warmupIterations.toString(),
     dataSize: benchmark.dataSize.toString()
   });
 
@@ -70,19 +69,6 @@ export const BenchmarkForm: React.FC<BenchmarkFormProps> = ({ benchmark, onSubmi
             max="100000"
             value={formData.iterations}
             onChange={(e) => handleInputChange('iterations', e.target.value)}
-            disabled={benchmark.isRunning}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor={`warmupIterations-${benchmark.id}`}>Warmup Iterations:</label>
-          <input
-            type="number"
-            id={`warmupIterations-${benchmark.id}`}
-            min="0"
-            max="10000"
-            value={formData.warmupIterations}
-            onChange={(e) => handleInputChange('warmupIterations', e.target.value)}
             disabled={benchmark.isRunning}
           />
         </div>

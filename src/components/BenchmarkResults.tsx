@@ -29,10 +29,6 @@ export const BenchmarkResults: React.FC<BenchmarkResultsProps> = ({ result }) =>
             <span className="value">{result.iterations.toLocaleString()}</span>
           </div>
           <div className="result-stat">
-            <span className="label">Warmup Iterations:</span>
-            <span className="value">{result.warmupIterations.toLocaleString()}</span>
-          </div>
-          <div className="result-stat">
             <span className="label">Data Size:</span>
             <span className="value">{result.dataSize.toLocaleString()} bytes</span>
           </div>
@@ -55,10 +51,6 @@ export const BenchmarkResults: React.FC<BenchmarkResultsProps> = ({ result }) =>
           <div className="result-stat">
             <span className="label">Total Time:</span>
             <span className="value">{result.totalTime.toFixed(3)} ms</span>
-          </div>
-          <div className="result-stat">
-            <span className="label">Warmup Time:</span>
-            <span className="value">{result.warmupTime.toFixed(3)} ms</span>
           </div>
           <div className="result-stat">
             <span className="label">Timestamp:</span>
