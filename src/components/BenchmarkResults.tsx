@@ -54,7 +54,14 @@ export const BenchmarkResults: React.FC<BenchmarkResultsProps> = ({ result }) =>
           </div>
           <div className="result-stat">
             <span className="label">Timestamp:</span>
-            <span className="value">{result.timestamp.toLocaleString()}</span>
+            <span className="value">{result.timestamp.toLocaleString('en-US', { 
+              year: 'numeric', 
+              month: '2-digit', 
+              day: '2-digit', 
+              hour: '2-digit', 
+              minute: '2-digit', 
+              second: '2-digit' 
+            })}</span>
           </div>
         </div>
       </div>
