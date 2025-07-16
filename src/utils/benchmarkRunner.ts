@@ -4,13 +4,17 @@ import { BenchmarkConfig, BenchmarkResult, BenchmarkFormData } from '../types/be
 import {
   CryptoSignDetachedBenchmark,
   CryptoSignVerifyDetachedBenchmark,
-  CryptoAeadXChaCha20Poly1305IetfEncryptBenchmark
+  CryptoAeadEncryptBenchmark
 } from '../benchmarks';
 
 const BENCHMARKS = {
   crypto_sign_detached: CryptoSignDetachedBenchmark,
   crypto_sign_verify_detached: CryptoSignVerifyDetachedBenchmark,
-  crypto_aead_xchacha20_poly1305_ietf_encrypt: CryptoAeadXChaCha20Poly1305IetfEncryptBenchmark
+  crypto_aead_xchacha20_poly1305_ietf_encrypt: CryptoAeadEncryptBenchmark,
+  crypto_aead_chacha20poly1305_encrypt: CryptoAeadEncryptBenchmark,
+  crypto_aead_chacha20poly1305_ietf_encrypt: CryptoAeadEncryptBenchmark,
+  crypto_aead_aegis256_encrypt: CryptoAeadEncryptBenchmark,
+  crypto_aead_aegis128l_encrypt: CryptoAeadEncryptBenchmark
 }
 
 export class BenchmarkRunner {

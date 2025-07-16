@@ -1,4 +1,11 @@
-export type AlgorithmType = 'crypto_sign_detached' | 'crypto_sign_verify_detached' | 'crypto_aead_xchacha20_poly1305_ietf_encrypt';
+export type AlgorithmType = 'crypto_sign_detached' | 
+  'crypto_sign_verify_detached' | 
+  'crypto_aead_xchacha20_poly1305_ietf_encrypt' |
+  'crypto_aead_chacha20poly1305_encrypt' |
+  'crypto_aead_chacha20poly1305_ietf_encrypt' |
+  'crypto_aead_aegis256_encrypt' |
+  'crypto_aead_aegis128l_encrypt'
+;
 
 export interface Algorithm {
   id: AlgorithmType;
