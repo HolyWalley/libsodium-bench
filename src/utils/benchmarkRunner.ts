@@ -5,7 +5,9 @@ import {
   CryptoSignDetachedBenchmark,
   CryptoSignVerifyDetachedBenchmark,
   CryptoAeadEncryptBenchmark,
-  CryptoAeadDecryptBenchmark
+  CryptoAeadDecryptBenchmark,
+  CryptoBoxSealBenchmark,
+  CryptoBoxSealOpenBenchmark
 } from '../benchmarks';
 
 const BENCHMARKS = {
@@ -20,7 +22,9 @@ const BENCHMARKS = {
   crypto_aead_chacha20poly1305_decrypt: CryptoAeadDecryptBenchmark,
   crypto_aead_chacha20poly1305_ietf_decrypt: CryptoAeadDecryptBenchmark,
   crypto_aead_aegis256_decrypt: CryptoAeadDecryptBenchmark,
-  crypto_aead_aegis128l_decrypt: CryptoAeadDecryptBenchmark
+  crypto_aead_aegis128l_decrypt: CryptoAeadDecryptBenchmark,
+  crypto_box_seal: CryptoBoxSealBenchmark,
+  crypto_box_seal_open: CryptoBoxSealOpenBenchmark
 }
 
 export class BenchmarkRunner {

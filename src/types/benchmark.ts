@@ -9,7 +9,9 @@ export type AlgorithmType = 'crypto_sign_detached' |
   'crypto_aead_chacha20poly1305_decrypt' |
   'crypto_aead_chacha20poly1305_ietf_decrypt' |
   'crypto_aead_aegis256_decrypt' |
-  'crypto_aead_aegis128l_decrypt'
+  'crypto_aead_aegis128l_decrypt' |
+  'crypto_box_seal' |
+  'crypto_box_seal_open'
 ;
 
 export interface Algorithm {

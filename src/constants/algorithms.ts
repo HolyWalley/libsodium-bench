@@ -60,5 +60,15 @@ export const AVAILABLE_ALGORITHMS: Algorithm[] = [
     id: 'crypto_aead_aegis128l_decrypt',
     name: 'crypto_aead_aegis128l_decrypt',
     description: 'AEGIS-128L decryption - benchmarks decryption performance'
+  },
+  {
+    id: 'crypto_box_seal',
+    name: 'crypto_box_seal',
+    description: 'Anonymous encryption using Curve25519, XSalsa20 and Poly1305'
+  },
+  {
+    id: 'crypto_box_seal_open',
+    name: 'crypto_box_seal_open',
+    description: 'Anonymous decryption using Curve25519, XSalsa20 and Poly1305'
   }
 ];
